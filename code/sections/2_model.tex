@@ -1,0 +1,57 @@
+\section{Model and Solution}
+
+
+\subsection{Assumptions}
+
+    We have made a prioritized list of the different categories of services/amenities in the city to more accurately assess how a stop would be “good” in terms of maximizing access to those services. This in itself is a big assumption that we have mostly created based on intuition, but plan to revise and back up based on articles and data that we find. This is what the priority list looks like so far:
+
+
+Groceries (1 day a week),
+Pharmacies ( 1 day a month),
+Medical Facility (irregular but important visits),
+Religious Buildings (1 day a week),
+Laundromats (1 day a week),
+Retail Stores (1 day a week),
+Community centers (1-3 days a week, recreational), and
+Restaurants (1-2 days a week) (Table 1).
+
+
+
+Our estimates of how often a service is visited (and potentially how important those visits are) are a big part of how we made this list. Overall, we feel that the top three:  grocery stores, pharmacies, and medical facilities are  the most important because of how essential they are to anyone’s life. The next three are potentially essential to someone’s life based on their circumstances and/or lifestyle. Then, the last three are places that are still important and regularly visited, but not necessarily essential by any means.
+
+The model has been constructed under the assumption that bus riders will be willing to walk for a time of at most 15 minutes to get to a bus stop, and/or get to services within 15 minutes walk from a bus stop.  The average adult human over 60 years walks at a speed of 1.21 meters/sec (Alves et al., 2020) hence if we calculate the maximum distance to and from a bus stop we get:
+
+\[(1.21\text{ meters/s})(15 \text{ min})=(1.21\text{meters/s})(15\text{ min})\left(\frac{60 \text{ sec}}{1 \text{ min}}\right)\approx 965 \text{meters}\approx 0.6 \text{ miles}\]
+
+Bus fares will be affordable for the average bus rider. Though an affordable bus system is undeniably important, this simply is not something that we will take into consideration as part of our model, which is why we’re making this assumption. We plan on using a model that concisely assesses maximizing accessibility based on geographical data and metrics that we define as unrelated to money. 
+
+
+
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{c|c}
+        \textbf{Service/Amenities} & \textbf{Points} \\
+        \hline
+        Presence of Grocery Store & 10\\
+        Presence of Pharmacy & 9\\
+        Medical Facilities & 5\\
+        Religious Buildings & 4\\
+        Laundromats & 3\\
+        Retail Stores & 2\\
+        Community Centers & 2\\
+        Restaurants & 1\\
+        
+    \end{tabular}
+    \caption{Point System For Clusters}
+    \label{tab:my_label}
+\end{table}
+
+
+\subsection{Model}
+We created a model that accounts for the amount of services and amenities in an area, as well as their importance.  Each service/amenity is represented by a different variable and has a corresponding point value (Table 1) as the coefficient.  To use the model, we counted up how many of each service/amenity was located in the 0.6 mile radius, and then multiplied it to its coefficient.  During our research, we saw that there were a lot of grocery stores and pharmacies along the bus routes.  Therefore, we made those two services a binary variable.  This accounts for any skewing that could occur due to having multiple grocery stores or pharmacies in the 0.6 mile radius.
+
+
+\begin{equation}
+    P=10g+9p+5m+4t+3l+2c+2s+r
+\end{equation}

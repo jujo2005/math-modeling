@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Edited by Rachel Grotheer, Wofford College from
+% A template for Technical Report
+% Prof. Siraj Shaikh
+% Dr. Hoang Nga Nguyen
+% Coventry University
+% 2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[12pt]{article}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[toc,page]{appendix}
+\usepackage{graphicx}
+\usepackage[square,numbers]{natbib}
+\usepackage{lipsum}
+\usepackage{caption}
+\usepackage{pdfpages}
+\usepackage{amsmath}
+
+\begin{document}
+
+\captionsetup[figure]{margin=1.5cm,font=small,labelfont={bf},name={Figure},labelsep=colon,textfont={it}}
+\captionsetup[table]{margin=1.5cm,font=small,labelfont={bf},name={Table},labelsep=colon,textfont={it}}
+\SetLipsumDefault{1}
+
+
+\begin{center}
+\thispagestyle{empty}
+{\LARGE Wofford College}\\[.5cm]
+{\Large Department of Mathematics}\\[3cm]
+{\linespread{1.2} {\Large Technical Report}}\\[0.5cm]
+{\huge \bfseries Maximizing Accessibility in Spartanburg's Bus Sytem}\\[1.5cm]
+\linespread{1}
+\includegraphics[width=3.5cm]{images/Woff_logo.png}\\[1cm]
+\vspace{\fill}
+{\Large Authors: Townshend Gillespie, Caroline Kirk, Aidan Langston-Smith, Ryan Methot, Juan Salas}
+
+{\Large \today}
+\end{center}
+
+\clearpage
+\pagenumbering{arabic}
+
+% -------------------------------------------------------------------
+% Contents, list of figures, list of tables
+% -------------------------------------------------------------------
+\input{sections/0_ExecutiveSummary}
+\newpage
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+\newpage
+
+% -------------------------------------------------------------------
+% Main sections (as required)
+% -------------------------------------------------------------------
+
+\input{sections/1_introduction.tex}
+\input{sections/2_model.tex}
+\input{sections/3_results.tex}
+\input{sections/4_conclusion.tex}
+
+
+% -------------------------------------------------------------------
+% Bibliography
+% -------------------------------------------------------------------
+
+
+\bibliographystyle{plainnat}
+\bibliography{main} 
+
+Alves, F., Cruz, S. S., Ribeiro, A., Silva, A. B., Martins, J. P., \& Cunha, I. (2020). Walkability Index for Elderly Health: A Proposal. \textit{ResearchGate}. https://www.researchgate.net/figure/Walking-average-speed-by-age-group-adapted-from-23-25-52\_tbl2\_344166318. Accessed 2024
+
+Du, J., Qiao, F., \& Yu, L. (2020). Improving Bus Transit Services for Disabled Individuals: Demand Clustering, Bus Assignment, and Route Optimization. \textit{ResearchGate}. https://www.researchgate.net/publication/342728331\_Improving\_Bus\_Transit\_Services\_for\_Disabled\_Individuals\_Demand\_Clustering\_Bus\_Assignment\_and\_Route\_Optimization. Accessed 15 May 2024
+
+Hawas, Y. E., Hassan, M. N., \& Abulibdeh, A. (2016). A multi-criteria approach of assessing public transport accessibility at a strategic level. \textit{Journal of Transport Geography}, \textit{57}, 19–34. doi:10.1016/j.jtrangeo.2016.09.011
+
+Yoo, S., \& Lee, J. (Brian). (2023). Revising bus routes to improve access for the transport disadvantaged: A reinforcement learning approach. \textit{Journal of Public Transportation}, \textit{25}, 100041. doi:10.1016/j.jpubtr.2023.100041
+
+% -------------------------------------------------------------------
+% Appendices
+% -------------------------------------------------------------------
+
+\newpage
+
+\begin{appendices}
+\input{sections/appendixA.tex}
+\end{appendices}
+
+\end{document}
