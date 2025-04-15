@@ -23,12 +23,11 @@ We developed a model that assigns accessibility scores to bus stops based on pro
 - Will be uploaded
 
 ### 💻 `code/`
-- `initial_data_summary.ipynb`: Python notebook used for sensitivity analysis, data visualization, and census data interpretation.
+- `main_files/`: files that contain all the LaTeX code used to construct the technical report
+- `sections/`: Contains individual files with code for all sections
 
 ### 📊 `data/`
-- `amenities.xlsx`: Manually collected data on Spartanburg’s services and amenities.
-- `census_transport_data.csv`: U.S. Census Bureau dataset on worker vehicle access and commuting patterns.
-- `bus_stops_coordinates.csv`: Geographic data of current bus stop locations.
+Will be updated
 
 ---
 
